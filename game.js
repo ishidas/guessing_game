@@ -50,5 +50,23 @@ var question3 = prompt('Did I move from Hawaii? (YES or NO)').toUpperCase();
     alert('That\'s not an option.');
   }
 
-  alert('You got' + ' ' + score + ' correct answers out of 3 questions!' );
+//adding question 4 (extra)from 10/27 assignment
+  var correctAnswer = 8
+  while ( question4 !== correctAnswer ) {
+    alert('That is not my favorite number. hint- between 5 and 9');
+    console.log('the user typed:' + ' ' + 'number' + ' ' + question4);
+    var question4 = parseInt(prompt('What is my favorite number?'));
+  }
+      if ( question4 === correctAnswer ){
+        console.log('the user selected' + ' ' + question4 + ': that is correct.');
+        alert('Yes, your answer is' + ' ' + question4 + ' ' + 'and that is correct!');
+        score += 1
+    }
+
+
+
+
+
+  alert('You got' + ' ' + score + ' correct answers out of 6 questions!' );
+
 
