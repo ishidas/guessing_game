@@ -49,8 +49,8 @@ var question3 = prompt('Did I move from Hawaii? (YES or NO)').toUpperCase();
   } else {
     alert('That\'s not an option.');
   }
-
-//adding question 4 (extra)from 10/27 assignment
+//Assignment on 10/28 starts from here
+//adding question 4 (extra)from 10/27-used while loope and if statements.
   var correctAnswer = 8
   while ( question4 !== correctAnswer ) {
     alert('That is not my favorite number. hint- between 5 and 9');
@@ -62,6 +62,18 @@ var question3 = prompt('Did I move from Hawaii? (YES or NO)').toUpperCase();
         alert('Yes, your answer is' + ' ' + question4 + ' ' + 'and that is correct!');
         score += 1
     }
+
+//adding question 5
+var question5 = prompt('Do you think I like sea otters? (YES or NO)').toUpperCase();
+  if (question5 === ('YES' && 'Y')) {
+    alert('Yes, I love sea otters, and I think they are cute.');
+    console.log(question5 + ' : the user selected a correct answer.');
+    score += 1;
+  } else if (question5 === ('NO' && 'N')) {
+    alert('No, you\'re incorrect.');
+  } else {
+    alert('That\'s not an option.');
+  }
 
 
 
