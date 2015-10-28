@@ -49,19 +49,22 @@ var question3 = prompt('Did I move from Hawaii? (YES or NO)').toUpperCase();
   } else {
     alert('That\'s not an option.');
   }
+
 //Assignment on 10/28 starts from here
 //adding question 4 (extra)from 10/27-used while loope and if statements.
-  var correctAnswer = 8
-  while ( question4 !== correctAnswer ) {
+  var correctAnswer = 8;
+  var askQuestion4 = 'What is my favorite number?';
+  var userAnswer4 = parseInt(prompt(askQuestion4));
+    while (userAnswer4 !== correctAnswer) {
     alert('That is not my favorite number. hint- between 5 and 9');
-    console.log('the user typed:' + ' ' + 'number' + ' ' + question4);
-    var question4 = parseInt(prompt('What is my favorite number?'));
-  }
-      if ( question4 === correctAnswer ){
-        console.log('the user selected' + ' ' + question4 + ': that is correct.');
-        alert('Yes, your answer is' + ' ' + question4 + ' ' + 'and that is correct!');
-        score += 1
+    console.log('the user typed:' + ' ' + 'number' + ' ' + userAnswer4);
+    userAnswer4 = parseInt(prompt(askQuestion4))
+      if(userAnswer4 === correctAnswer){
+        console.log('the user selected a correct answer:' + ' ' + correctAnswer);
+        alert('Yes, that is correct!');
     }
+  }
+
 
 //adding question 5
 var question5 = prompt('Do you think I like sea otters? (YES or NO)').toUpperCase();
@@ -75,7 +78,19 @@ var question5 = prompt('Do you think I like sea otters? (YES or NO)').toUpperCas
     alert('That\'s not an option.');
   }
 
-
+//adding question 6
+var correctAnswer6 = 11;
+  var askQuestion6 = 'How long did I live in Hawaii?';
+  var userAnswer6 = parseInt(prompt(askQuestion6));
+    while (userAnswer6 !== correctAnswer6) {
+    alert('That\'s incorrect. hint- more than a decay, less than 15.');
+    console.log('the user typed:' + ' ' + 'number' + ' ' + userAnswer6);
+    userAnswer6 = parseInt(prompt(askQuestion6))
+      if(userAnswer6 === correctAnswer6){
+        console.log('the user selected a correct answer:' + ' ' + correctAnswer6);
+        alert('Yes, that is correct!');
+    }
+  }
 
 
 
