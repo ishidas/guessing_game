@@ -18,3 +18,13 @@ Driver: AJ Wohlfert
 Navigator: Sawako Ishida
 
 * Updated Javascript & HTML. Question Alerts are now displayed on the page. Wrapped questions in functions.
+
+Oct. 30th
+__________________________
+
+Updates to the code today was worked on by the following individuals:
+
+Driver: Rick Tesmond
+Navigator: Sawako Ishida
+
+*Updated Javascript & HTML & added CSS. Added images, modified while loops, added background and class colors, and timers!... Don't forget the punchline.
