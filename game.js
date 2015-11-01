@@ -5,6 +5,7 @@ var ans4 = document.getElementById('answer4');
 var ans5 = document.getElementById('answer5');
 var ans6 = document.getElementById('answer6');
 var ttlscore = document.getElementById('finalScore');
+var score = 0;
 
 //Javascript practice-prompt & alert//
 
@@ -16,13 +17,12 @@ alert('Nice! I would love to go visit ' + countryOfOrigin +' ' + 'one day!');
 
 //Guessing Game 10.27 Assignment//
 
-var score = 0
 
 function intro() {
   var gamePlay = prompt('Do you want to play a game? (YES or NO)').toUpperCase();
-  if (gamePlay === ('YES' || 'Y')) {
+  if (gamePlay === 'YES' || gamePlay === 'Y') {
     alert('Great! That\'s the spirit! Let\'s play!');
-  } else if (gamePlay === ('NO' || 'N')) {
+  } else if (gamePlay === 'NO' || gamePlay === 'N') {
     alert('Ok, but you\'re gonna play it anyways..');
   } else {
     alert('That\'s not an option, but you\'re gonna play it anyways..');
@@ -31,16 +31,17 @@ function intro() {
 
 function q1(){
   var question1 = prompt('Did I grow up in the US? (YES or NO)').toUpperCase();
-  if (question1 === ('YES' || 'Y')) {
+  if (question1 === 'YES' || question1 === 'Y') {
     ans1.innerHTML = 'No, I grew up in Japan.';
     ans1.className = "red";
     // alert('No, I grew up in Japan.');
-  } else if (question1 === ('NO' || 'N')) {
+  } else if (question1 === 'NO' || question1 === 'N') {
+    score += 1;
+    console.log(score);
     ans1.innerHTML = 'Yes, you\'re correct! <br /> <img style= "width: 200px"; src="img/osakajpn.jpg" alt="Osaka, Japan">';
     ans1.className= "green";
     // alert('Yes, you\'re correct!');
     console.log(question1 + ' : the user selected a correct answer.');
-    score += 1;
   } else {
     ans1.innerHTML = 'That\'s not an option.';
     ans1.className= "red";
@@ -50,13 +51,14 @@ function q1(){
 
 function q2(){
   var question2 = prompt('Do I like ice cream sandwiches? (YES or NO)').toUpperCase();
-  if (question2 === ('YES' || 'Y')) {
+  if (question2 === 'YES' || question2 === 'Y') {
+    score += 1;
+    console.log(score);
     ans2.innerHTML = 'Yes, I love ice cream sandwiches! <br /> <img style="width: 200px"; src="img/icecream.jpg" alt="Ice cream">';
     ans2.className = "green";
     // alert('Yes, I love ice cream sandwiches!');
     console.log(question2 + ' : the user selected a correct answer.');
-    score += 1;
-  } else if (question2 === ('NO' || 'N')) {
+  } else if (question2 === 'NO' || question2 === 'N') {
     ans2.innerHTML = 'No, you\'re incorrect.';
     ans2.className = "red";
     // alert('No, you\'re incorrect.');
@@ -69,13 +71,14 @@ function q2(){
 
 function q3(){
   var question3 = prompt('Did I move from Hawaii? (YES or NO)').toUpperCase();
-  if (question3 === ('YES' || 'Y')) {
+  if (question3 === 'YES' || question3 === 'Y') {
+    score += 1;
+    console.log(score);
     ans3.innerHTML = 'Yes, I did move from Hawaii! <br /> <img style= "width: 200px"; src="img/hawaii.jpg" alt="Hawaii">';
     ans3.className = "green";
     // alert('Yes, I did move from Hawaii!');
     console.log(question3 + ' : the user selected a correct answer.');
-    score += 1;
-  } else if (question3 === ('NO' || 'N')) {
+  } else if (question3 === 'NO' || question3 === 'N') {
     ans3.innerHTML = 'No, you\'re incorrect.';
     ans3.className = "red";
     // alert('No, you\'re incorrect.');
@@ -101,6 +104,8 @@ function q4() {
       console.log('the user selected a correct answer:' + ' ' + correctAnswer);
       ans4.innerHTML = 'Yes, that is correct! <br /> <img style= "width: 200px"; src="img/numbereight.jpg" alt="Number Eight">';
       ans4.className = "green";
+      score += 1;
+      console.log(score);
         // alert('Yes, that is correct!');
     // }
   // }
@@ -109,13 +114,14 @@ function q4() {
 //adding question 5
 function q5() {
   var question5 = prompt('Do you think I like sea otters? (YES or NO)').toUpperCase();
-  if (question5 === ('YES' || 'Y')) {
+  if (question5 === 'YES' || question5 === 'Y') {
     ans5.innerHTML = 'Yes, I love sea otters, and I think they are cute. <br /> <img style="width: 200px"; src="img/seaotter.jpg" alt="Sea Otter">';
+    score += 1;
+    console.log(score);
     ans5.className = "green";
     // alert('Yes, I love sea otters, and I think they are cute.');
     console.log(question5 + ' : the user selected a correct answer.');
-    score += 1;
-  } else if (question5 === ('NO' || 'N')) {
+  } else if (question5 === 'NO' || question5 === 'N') {
     ans5.innerHTML = 'No, you\'re incorrect.';
     ans5.className = "red";
     // alert('No, you\'re incorrect.');
@@ -139,11 +145,14 @@ function q6() {
       // if(userAnswer6 === correctAnswer6){
     console.log('the user selected a correct answer:' + ' ' + correctAnswer6);
     ans6.innerHTML = 'Yes, that is correct!<br /> <img style="width: 200px"; src="img/livedinhawaii11yrs.jpg" alt="Lived in hawaii">';
+    score += 1;
+    console.log(score);
     ans6.className = "green";
         // alert('Yes, that is correct!');
     // }
   // }
 }
+
 
 intro();
 window.setTimeout(q1, 1000);
@@ -158,5 +167,6 @@ window.setTimeout(q6, 1250);
 // q4();
 // q5();
 // q6();
-ttlscore.innerHTML = 'You got' + ' ' + score + ' correct answers out of 6 questions!';
+window.setTimeout(function (){ ttlscore.innerHTML = 'You got' + ' ' + score + ' correct answers out of 6 questions!' ;}, 1300);
+window.setTimeout(function (){ console.log(score);}, 1350);
 // alert('You got' + ' ' + score + ' correct answers out of 6 questions!' );
